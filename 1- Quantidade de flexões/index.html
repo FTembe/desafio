@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Quantidade de flexões</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    input {
+        width: 50%;
+        padding: 12px;
+        height: 15px;
+        margin-bottom: 1rem;
+        font-size: 18px;
+    }
+
+    button {
+        border: none;
+        background-color: #fff;
+        font-size: 18px;
+        padding: 5px 1rem;
+    }
+    span{
+        color: #fff;
+        font-weight: 600;
+    }
+</style>
+
+<body>
+    <div>Desafio</div>
+    <!-- <p><b>Quantidade de flexões</b> - Um atleta faz flexões em sèrie, com quantidades crescentes: 1 vez, depois 2 vezes,
+        3, 4 e assim por diante. Ao final de uma sessão, ele quer saber rapidamente a quantidade total de flexões que
+        fez. Por exemplo, se ele fez 5 sequências, fez ao todo 15 flexões (5+4+3+2+1). Implemente um programa que leia o
+        número máximo e informe o total</p> -->
+    <input type="text">
+    <span></span><br>
+    <button>Calcular</button>
+</body>
+
+<script>
+    function sum(value = 0) {
+        let total = 0, i = 0;
+        for (i; i <= value; i++) {
+            total += i
+        }
+        return total
+    }
+   
+    document.querySelector('button').addEventListener('click', () => {
+        let get_value = document.querySelector('input').value
+        document.querySelector('span').innerHTML = "O total de flexões e de " + sum(get_value)
+    })
+</script>
+
+</html>
