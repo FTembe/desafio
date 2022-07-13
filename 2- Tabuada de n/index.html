@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="font.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./me.jpg" type="image/x-icon">
+    <title>Tabuada de 1 até N </title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <span><img src="./me.jpg" alt=""> &nbsp #02 - Desafio</span>
+    <div>
+        <!-- <h2>Escreva uma função que recebe, por parâmetro, um valor N e calcula e escreve a tabuada de 1 até N.
+            Mostre a tabuada na forma:</h2><br>
+        <p>1 x N = N <br> 2 x N = 2N <br>... <br>N x N = N<sup>2</sup></p> -->
+
+        <style>
+            input{
+                padding: .5rem 1rem;
+                font-size: 1rem;
+            }
+            button{
+                border: none;
+                padding: .5rem 1rem;
+                font-size: 1rem;
+            }
+            .result{
+                margin-top: 12px;
+            }
+        </style>
+        <input type="text" id="limit" placeholder="limite">
+        <input type="text" id="number" placeholder="numero"><br><br>
+        <button>Calcular</button> 
+        <div class="result"></div>
+    </div>
+</body>
+<script>
+
+    function multiplication_table(n, limit = 10){
+        let attemp_str='';
+
+        for(let i =0 ; i<=limit ; i++){
+            attemp_str += `${n} * ${i} = ${n*i} <br> `
+        }
+        return attemp_str;
+    }
+    document.querySelector('button').addEventListener('click', ()=>{
+        let value = document.querySelector('#number').value;
+        let limit = document.querySelector('#limit').value;
+        document.querySelector('.result').innerHTML = multiplication_table(value, limit)
+    })
+  
+</script>
+
+</html>

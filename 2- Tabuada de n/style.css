@@ -1,0 +1,49 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: #001;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div {
+    line-height: 1.8rem;
+    width: 80%;
+    text-align: justify;
+}
+
+span {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background-color: #fff;
+    color: #001;
+    padding: .2rem .8rem;
+    border-radius: 2px;
+    box-shadow: .4rem 5px rgba(225, 221, 221, 0.6);
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    text-transform: uppercase;
+}
+span img {
+    width: 28px;
+    border-radius: 36px;
+    filter: grayscale(100);
+}
+p{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
