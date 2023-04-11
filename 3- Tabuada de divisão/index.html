@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada de divisão</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            padding: 0 3rem;
+        }
+
+        p {
+            font-size: 1.8rem;
+        }
+    </style>
+</head>
+
+<body bgcolor="aliceblue">
+    <main>
+        <h1>Tabuada de divisão (÷)</h1>
+        <p>Escreva uma função que recebe, por parâmetro, um valor N e calcula e escreve a tabuada de i÷n.</p>
+
+        <input type="number">
+        <button>Calcular</button>
+        <br>
+        <div class="result"></div>
+    </main>
+    <script>
+        function divisionChart(n) {
+            let result = '';
+            for (let i = 1; i <= 12; i++) {
+                let division = i / n;
+                result += `${i} ÷ ${n} = ${Number.isInteger(division) ? division : division.toFixed(2)} <br>`
+            }
+            return result
+        }
+        document.querySelector('button').addEventListener('click', () => {
+            let value = parseInt(document.querySelector('input').value);
+            document.querySelector('.result').innerHTML = (divisionChart(value))
+        })
+
+    </script>
+</body>
+
+</html>
